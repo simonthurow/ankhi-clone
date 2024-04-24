@@ -1,24 +1,50 @@
-import logo from './logo.svg';
+import {
+  collection, getDocs
+} from 'firebase/firestore';
+
+import Deck from './Decks.js';
+import DeckList from './DeckList.js';
+import db from './Firebase.js';
 import './App.css';
+import React, { useState, useEffect } from 'react';
+import { SearchDecks } from './SearchDecks.js';
+
+const userID = "7KmIAaU1E2b3SXpQQl3C";
 
 function App() {
+
+  const[allUserDecks, setAllUserDecks] = useState([]);
+
+  //Fetch data from firebase database(id, name and userID)
+  async function getData() {
+    const snapshot = await getDocs(collection(db, "Decks"));
+    const allData = [];
+    snapshot.forEach((doc) => {
+      if(doc.data().userID === userID)
+        allData.push({id: doc.id, name: doc.data().name, userID: doc.data().userID});
+    });
+    setAllUserDecks(allData);
+  }
+
+  useEffect(() => {
+    getData();
+  }, []);
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <html className="page">
+      <header className="title">
+        2Remember
       </header>
-    </div>
+      <body className='body'>
+        <div>
+          <SearchDecks decks={allUserDecks}/>
+        </div>
+      </body>
+    </html>
+
+    
+    
   );
 }
 

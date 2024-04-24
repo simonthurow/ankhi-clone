@@ -1,0 +1,17 @@
+.deckButton{
+    border-radius: 10px;
+    background: rgb(129, 7, 103);
+    padding: 25px;
+    margin: 20px;
+    font-size: 20px;
+    color: white;
+    transition-duration: 0.2s;
+}
+
+.deckButton:hover{   
+    padding: 28px;
+    margin: 17px;
+    border-color: white;
+    border-width: 2px;
+    cursor: pointer;
+}
