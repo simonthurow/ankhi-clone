@@ -7,7 +7,7 @@ import DeckList from './DeckList.js';
 import db from './Firebase.js';
 import './App.css';
 import React, { useState, useEffect } from 'react';
-import { SearchDecks } from './SearchDecks.js';
+import SearchDecks from './SearchDecks.js';
 
 const userID = "7KmIAaU1E2b3SXpQQl3C";
 

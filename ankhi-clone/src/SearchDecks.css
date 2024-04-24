@@ -1,13 +1,40 @@
+.searchInputContainer{
+    display:flex;
+    justify-content: center;
+}
+
 .searchInput{
     background-color: rgb(255, 194, 255);
-    width: 100%;
-    box-sizing: border-box; 
-    display: flex;
-    justify-content: center;
+    width: 500px;
     border-radius: 15px;
-    padding: 8px;
+    padding: 10px;
+    transition-duration: .2s;
 }
 
 .searchInput:hover, .searchInput:focus{
-    background-color: rgb(255, 180, 255);
+    background-color: rgb(236, 158, 236);
 }
+
+.deckList{
+    transition-duration: 1s;
+}
+
+.addButton{
+    display: flex;
+    justify-content: center;
+    transition-duration: .3s;
+}
+
+.deckListHighlight {
+    margin-top: -100px;
+}
+
+.addButtonHighlight{
+    opacity: 0;
+}
+
+@media (max-width: 539px) {
+    .searchInput{
+        width: 400px;
+    }
+  }

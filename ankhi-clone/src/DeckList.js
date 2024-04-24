@@ -3,7 +3,7 @@ import Deck from './Decks.js';
 import './DeckList.css';
 
 const DeckList = ({decks, emptyHeading}) => {
-  const count = decks.length-1;
+  const count = decks.length;
   let heading = emptyHeading;
   if(count > 0){
     const noun = count > 1 ? 'Decks' : 'Deck';
