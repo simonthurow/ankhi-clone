@@ -1,51 +1,26 @@
-import {
-  collection, getDocs
-} from 'firebase/firestore';
+import React from "react";
+import { useState } from "react";
+import { BrowserRouter , Route, Routes, Switch} from "react-router-dom";
+import Home from "./pages/Home";
+import Learn from "./pages/Learn";
+import AddDeck from "./pages/AddDeck";
 
-import Deck from './Decks.js';
-import DeckList from './DeckList.js';
-import db from './Firebase.js';
-import './App.css';
-import React, { useState, useEffect } from 'react';
-import SearchDecks from './SearchDecks.js';
 
-const userID = "7KmIAaU1E2b3SXpQQl3C";
+const App = () => {
 
-function App() {
-
-  const[allUserDecks, setAllUserDecks] = useState([]);
-
-  //Fetch data from firebase database(id, name and userID)
-  async function getData() {
-    const snapshot = await getDocs(collection(db, "Decks"));
-    const allData = [];
-    snapshot.forEach((doc) => {
-      if(doc.data().userID === userID)
-        allData.push({id: doc.id, name: doc.data().name, userID: doc.data().userID});
-    });
-    setAllUserDecks(allData);
-  }
-
-  useEffect(() => {
-    getData();
-  }, []);
-
+  const[userID, setUserID] = useState("7KmIAaU1E2b3SXpQQl3C");
+  const[deckID, setDeckID] = useState("");
 
   return (
-    <html className="page">
-      <header className="title">
-        2Remember
-      </header>
-      <body className='body'>
-        <div>
-          <SearchDecks decks={allUserDecks}/>
-        </div>
-      </body>
-    </html>
-
-    
-    
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home userID={userID} />}/>
+        <Route path="/learn" element={<Learn deckID={deckID}/>}/>
+        <Route path="/addDeck" element={<AddDeck userID={userID}/>}/>
+      </Routes>    
+    </BrowserRouter>  
   );
 }
+
 
 export default App;

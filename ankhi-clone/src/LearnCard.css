@@ -1,0 +1,38 @@
+.card{
+    background: rgb(117, 13, 109);
+    border-radius: 35px;
+    padding: 60px;
+    height: 200px;
+    width: 500px;  
+    margin: auto;
+    margin-top: 100px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-width: 20px;
+    border-color: white;
+    transition-duration: .2s;
+}
+
+.card:hover{
+    cursor: pointer;
+    background: rgb(131, 15, 121);
+    padding: 65px;
+    border-width: 20px;
+    margin-top: 95px;
+    border-color: white;
+}
+
+@media (max-width: 625px) {
+    .card{
+        height: 100px;
+        width: 250px
+    }
+
+    .card:hover{
+        cursor: pointer;
+        padding: 65px;
+    }
+  }
+    

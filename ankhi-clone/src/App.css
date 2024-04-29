@@ -1,29 +1,5 @@
-.title{
-  color:rgb(255, 255, 255);
-  font-size: 70px;
-  font-weight: bold;
-  display: flex;
-  justify-content: center;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  text-decoration: underline;
-  transition-duration: .2s;
-}
-
-@media (max-width: 488px) {
-  .title{
-    font-size: 60px;
+.homePage {
+    background: rgb(0, 0, 0);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgb(54, 0, 56) 100%);
+    min-height: 100vh;
   }
-}
-
-.body{
-  margin-top: 50px;
-  display: flex;
-  justify-content: center;
-}
-
-
-.page {
-  background: rgb(0,0,0);
-  background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgb(54, 0, 56) 100%);
-  min-height: 100vh;
-}

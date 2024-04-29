@@ -1,0 +1,13 @@
+.body{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+
+.learnPage {
+  background: rgb(0,0,0);
+  background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgb(54, 0, 56) 100%);
+  min-height: 100vh;
+}
+    
