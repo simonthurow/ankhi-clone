@@ -1,19 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Decks.css';
-import { BrowserRouter , Route, Routes, Switch, Link} from "react-router-dom";
-import Learn from "./pages/Learn.js";
-import App from './App';
+import { Link} from "react-router-dom";
+import { useDispatch } from 'react-redux';
+import { setDeckID, setDeckName } from './actions';
 
-const Decks = ({deckName}) => {
+const Decks = ({deckName, deckID}) => {
+  const dispatch = useDispatch();
+
+  const StartDeck = (deckID) => {
+    dispatch(setDeckID(deckID))
+    dispatch(setDeckName(deckName))
+  }
+
   return (
-      <button className='deckButton' onClick={StartDeck}>
-        {deckName}
-      </button>
+    <Link to="/learn" style={{textDecoration: 'none'}}>
+
+        <div className='deckButton' onClick={() => {StartDeck(deckID)}}>
+          {deckName}
+        </div> 
+    
+    </Link>
+      
   )
 }
 
-const StartDeck = () => {
-  
-}
 
 export default Decks;

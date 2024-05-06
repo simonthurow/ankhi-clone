@@ -1,11 +1,12 @@
 .deckAdderButton{
     border-radius: 20px;
-    background: rgb(56, 186, 247);
+    background: rgb(105, 105, 105);
     padding: 25px 45px;
     margin: 20px;
     font-size: 20px;
     color: white;
     transition-duration: 0.2s;
+    box-shadow: rgba(109, 109, 109, 0.24) 0px 5px 10px;
 }
 
 .deckAdderButton:hover{   

@@ -1,5 +1,12 @@
 .decksHeader{
     color: white;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    margin-left: 20px;
+    font-family: "Archivo", sans-serif;
+    margin-left: 30px;
+}
+
+.deckList{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 20px;
 }

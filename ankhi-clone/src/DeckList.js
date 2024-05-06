@@ -15,7 +15,7 @@ const DeckList = ({decks, emptyHeading}) => {
       <h2 className="decksHeader">{heading}</h2>
       <div className="deckList">
       {decks.map(deck => 
-        <Deck deckName={deck.name}/>
+        <Deck deckName={deck.name} deckID={deck.id}/>
       )}
       </div>
     </section>

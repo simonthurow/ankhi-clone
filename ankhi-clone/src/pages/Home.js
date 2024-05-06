@@ -22,6 +22,7 @@ function Home({userID}) {
       if(doc.data().userID === userID)
         allData.push({id: doc.id, name: doc.data().name, userID: doc.data().userID});
     });
+    allData.sort();
     setAllUserDecks(allData);
   }
 

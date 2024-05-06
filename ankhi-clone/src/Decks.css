@@ -1,16 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap');
+
+
 .deckButton{
     border-radius: 10px;
-    background: rgb(129, 7, 103);
+    background: rgb(32, 32, 32);
     padding: 25px;
-    margin: 20px;
+    margin: 10px;
     font-size: 20px;
+    font-family: "Archivo", sans-serif;
     color: white;
     transition-duration: 0.2s;
+    box-shadow: rgba(82, 82, 82, 0.24) 0px 3px 8px;
 }
 
 .deckButton:hover{   
-    padding: 28px;
-    margin: 17px;
-    border-color: white;
+    padding: 22px;
+    margin: 10px;
+    background: rgb(49, 49, 49);
     cursor: pointer;
+    font-weight: bold;
+    font-size: 18px;
 }
+
