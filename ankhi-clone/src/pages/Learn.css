@@ -42,4 +42,19 @@
 .deckName:hover{
     cursor:default;
 }
+
+#learnedCounter{
+  margin-top: 10px;
+  color: white;
+  font-family: 'Archivo', sans-serif;
+  font-size: 25px;
+  font-weight: bold;
+  opacity: 25%;
+  display: flex;
+  justify-content: center;
+}
+
+.learnedCounter:hover{
+  cursor:default;
+}
     

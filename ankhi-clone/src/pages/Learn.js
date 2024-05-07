@@ -48,6 +48,9 @@ const Learn = ({deckID, deckName}) => {
           ({deckName})
         </div>
         <LearnCard front={question} back={answer}/>
+        <div id="learnedCounter">
+          {currentIndex}/{cards.length}
+        </div>
         <button class="changeButton" onClick={() => changeCard()}>
           Next Card!
         </button>
