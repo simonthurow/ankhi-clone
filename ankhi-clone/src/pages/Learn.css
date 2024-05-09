@@ -1,5 +1,4 @@
 .body{
-    margin-top: 50px;
     display: flex;
     justify-content: center;
 }
@@ -36,11 +35,12 @@
     opacity: 25%;
     display: flex;
     justify-content: center;
-    margin: auto;
+    transition-duration: .2s;
 }
 
 .deckName:hover{
-    cursor:default;
+    cursor: pointer;
+    opacity: 40%;
 }
 
 #learnedCounter{
@@ -57,4 +57,17 @@
 .learnedCounter:hover{
   cursor:default;
 }
+
+.settings{
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+  cursor: pointer;
+  opacity: 25%;
+  transition-duration: .2s;
+}
+.settings:hover{
+  opacity: 40%;
+}
+
     

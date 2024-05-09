@@ -1,18 +1,20 @@
 .deckAdderButton{
-    border-radius: 20px;
-    background: rgb(105, 105, 105);
-    padding: 25px 45px;
-    margin: 20px;
+    border-radius: 10px;
+    background: rgb(99, 99, 99);
+    padding: 25px;
+    margin: 10px;
     font-size: 20px;
+    font-family: "Archivo", sans-serif;
     color: white;
     transition-duration: 0.2s;
-    box-shadow: rgba(109, 109, 109, 0.24) 0px 5px 10px;
+    box-shadow: rgba(82, 82, 82, 0.24) 0px 3px 8px;
 }
 
 .deckAdderButton:hover{   
-    padding: 26px 46px;
-    margin: 19px;
-    border-color: white;
-    border-width: 2px;
+    padding: 24px;
+    margin: 10px;
+    background: rgb(119, 119, 119);
     cursor: pointer;
+    font-weight: bold;
+    font-size: 18px;
 }

@@ -6,18 +6,22 @@ import './Learn.css';
 import { LearnCard } from '../LearnCard';
 
 import {
-  collection, getDocs
+  collection, getDocs,
+  updateDoc, doc
 } from 'firebase/firestore';
 import db from '../Firebase.js';
 
+import { Link} from "react-router-dom";
+
 import { useEffect } from 'react';
+import { setDeckName } from '../actions.js';
 
 const Learn = ({deckID, deckName}) => {
   const[cards, setCards] = useState([]);
   const[currentIndex, setCurrentIndex] = useState(0);
   const[question, setQuestion] = useState("Click on 'Next Card!' to start learning!");
   const[answer, setAnswer] = useState("Click on 'Next Card!' to start learning!");
-  console.log(deckID)
+  const[thisDeckName, setThisDeckName] = useState("");
   
   async function getCardData() {
     const snapshotCards = await getDocs(collection(db, "Cards"));
@@ -31,7 +35,9 @@ const Learn = ({deckID, deckName}) => {
 
   useEffect(() => {
     getCardData();
+    setThisDeckName(deckName);
   }, []);
+
 
   function changeCard(){
     if(currentIndex<cards.length){
@@ -41,13 +47,35 @@ const Learn = ({deckID, deckName}) => {
     } 
   }
 
+  async function changeName(){
+    let newDeckName = window.prompt("What should be the new Deck name?");
+    if(newDeckName=="" || newDeckName==null){
+      return;
+    }
+    const deckRef = doc(collection(db, "Decks"), deckID);
+    updateDoc(deckRef, {
+      name: newDeckName
+    })
+    .then(() => {
+      setThisDeckName(newDeckName);
+    })
+    .catch((error) => {
+      console.error("Document couldnt be updated", error);
+    })   
+  }
+
   return (
     <div class="learnPage">
         <Header />  
-        <div class="deckName">
-          ({deckName})
+        <div class="deckName" onClick={()=>changeName()}>
+          ({thisDeckName})
         </div>
-        <LearnCard front={question} back={answer}/>
+        <div class="settings" >
+          <Link to="/deckSettings"  style={{textDecoration: 'none'}}>
+            <img src="../../settingsIcon.png" alt="settings" width="50" height="50"/>
+          </Link>
+        </div>
+          <LearnCard front={question} back={answer} width="500px" height="200px"/>
         <div id="learnedCounter">
           {currentIndex}/{cards.length}
         </div>

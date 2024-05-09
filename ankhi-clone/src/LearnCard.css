@@ -17,12 +17,10 @@
     cursor:default;
 }
 
-.card{
+#card{
     background: rgb(105, 105, 105);
     border-radius: 35px;
-    padding: 60px;
-    height: 200px;
-    width: 500px;  
+    padding: 60px;  
     margin: auto;
     margin-top: 15px;
     color: white;
@@ -37,7 +35,7 @@
     font-size: 25px;
 }
 
-.card:hover{
+#card:hover{
     cursor: pointer;
     background: rgb(128, 128, 128);
     padding: 65px;
@@ -45,16 +43,33 @@
     border-color: white;
 }
 
+
+.turn{
+    animation-name: turnAround;
+    animation-duration: .5s;
+}
+
+
+
 @media (max-width: 625px) {
-    .card{
+    #card{
         height: 100px;
         width: 250px;
         font-size: 18px;
     }
 
-    .card:hover{
+    #card:hover{
         cursor: pointer;
         padding: 65px;
     }
-  }
-    
+}
+
+/*@keyframes turnAround {
+    0% {
+        transform: perspective(800px) rotateY(0deg);
+    }
+    100% {
+        transform: perspective(800px) rotateY(180deg);
+    }
+}*/
+

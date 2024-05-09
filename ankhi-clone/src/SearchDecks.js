@@ -6,7 +6,7 @@ import DeckAdder from './DeckAdder';
 const filterDecks = (decks, searchDecks) => {
     let foundDecks = [];
     decks.forEach(deck => {
-        if(deck.name.toLowerCase().includes(searchDecks.toLowerCase()))
+        if(deck.name!=null && deck.name.toLowerCase().includes(searchDecks.toLowerCase()))
             foundDecks.push(deck);
     });
     return foundDecks;

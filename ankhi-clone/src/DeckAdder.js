@@ -4,10 +4,10 @@ import { Link } from 'react-router-dom'
 
 const DeckAdder = () => {
     return (
-        <Link to="/addDeck">
-            <button className='deckAdderButton'>
-                +
-            </button>
+        <Link to="/addDeck" style={{textDecoration: 'none'}}>
+            <div className='deckAdderButton'>
+                Add Deck
+            </div>
         </Link>
       )
 }
