@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Header from '../Header';
 import './Learn.css';
 import { LearnCard } from '../LearnCard';
+import DeckName from '../DeckName.js';
 
 import {
   collection, getDocs,
@@ -67,9 +68,7 @@ const Learn = ({deckID, deckName}) => {
   return (
     <div class="learnPage">
         <Header />  
-        <div class="deckName" onClick={()=>changeName()}>
-          ({thisDeckName})
-        </div>
+        <DeckName deckID={deckID} deckName={deckName}/>
         <div class="settings" >
           <Link to="/deckSettings"  style={{textDecoration: 'none'}}>
             <img src="../../settingsIcon.png" alt="settings" width="50" height="50"/>

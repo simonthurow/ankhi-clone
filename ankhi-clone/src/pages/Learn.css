@@ -26,23 +26,6 @@
   min-height: 100vh;
 }
 
-.deckName {
-    color: white;
-    font-family: 'Archivo', sans-serif;
-    font-size: 25px;
-    font-weight: bold;
-    text-align: center;
-    opacity: 25%;
-    display: flex;
-    justify-content: center;
-    transition-duration: .2s;
-}
-
-.deckName:hover{
-    cursor: pointer;
-    opacity: 40%;
-}
-
 #learnedCounter{
   margin-top: 10px;
   color: white;
@@ -61,10 +44,12 @@
 .settings{
   display: flex;
   justify-content: center;
+  margin: auto;
   margin-top: 25px;
   cursor: pointer;
   opacity: 25%;
   transition-duration: .2s;
+  width: 50px;
 }
 .settings:hover{
   opacity: 40%;

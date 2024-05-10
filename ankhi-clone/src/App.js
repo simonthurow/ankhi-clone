@@ -20,7 +20,7 @@ const App = () => {
         <Route path="/" element={<Home userID={userID} />}/>
         <Route path="/learn/" element={<Learn deckID={deckID} deckName={deckName}/>}/>
         <Route path="/addDeck" element={<AddDeck userID={userID}/>}/>
-        <Route path="/deckSettings" element={<CardSettings deckID={deckID}/>} />
+        <Route path="/deckSettings" element={<CardSettings deckID={deckID} deckName={deckName}/>} />
       </Routes>    
     </BrowserRouter>  
     

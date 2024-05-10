@@ -7,15 +7,51 @@ body{
     margin-top: 20px;
 }
 
-.cardAdder{
+.settingsButtons{
     display: flex;
     justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+#deckDeleter{
+    width: 180px;
+    border-radius: 10px;
+    background: rgb(102, 80, 80);
+    padding: 25px;
+    margin-top: 10px;
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+    font-family: "Archivo", sans-serif;
+    text-decoration: underline;
+    color: white;
+    transition-duration: 0.2s;
+    box-shadow: rgba(82, 82, 82, 0.24) 0px 3px 8px;
+}   
+.deckDeleterHighlight  {
+    
+}   
+    
+
+#deckDeleter:hover{
+    padding: 24px;
+    background: rgb(109, 73, 73);
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.cardAdder{
     width: 100px;
     border-radius: 10px;
     background: rgb(99, 99, 99);
     padding: 25px;
-    margin: auto;
     margin-top: 10px;
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
     font-size: 20px;
     font-family: "Archivo", sans-serif;
     color: white;

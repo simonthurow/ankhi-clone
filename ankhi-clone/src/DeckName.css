@@ -1,0 +1,18 @@
+.deckName {
+    color: white;
+    font-family: 'Archivo', sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    opacity: 25%;
+    display: flex;
+    justify-content: center;
+    transition-duration: .2s;
+    width: 500px;
+    margin: auto;
+}
+
+.deckName:hover{
+    cursor: pointer;
+    opacity: 40%;
+}

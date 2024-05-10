@@ -8,7 +8,7 @@ const LearnCardList = ({learnCards, emptyHeading}) => {
   const count = learnCards.length;
   let heading = emptyHeading;
   if(count > 0){
-    const noun = count > 1 ? 'Cards' : 'Cards';
+    const noun = count > 1 ? 'Cards' : 'Card';
     heading = count + ' ' + noun + " found";
   }
   
