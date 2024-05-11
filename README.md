@@ -1,4 +1,4 @@
-2Remember(anki-clone)
+#2Remember(anki-clone)
 
 This is a small anki like web application allowing users to learn through index cards by creating decks and corresponding cards in those decks.
 The user can:
