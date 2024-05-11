@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap');
+
+.title{
+    color:rgb(228, 228, 228);
+    font-size: 70px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    width: 0px;
+    font-family: 'Archivo', sans-serif;
+    margin-top: 20px;
+    text-decoration: underline rgb(228, 228, 228, 0);   
+    transition: text-decoration-color .3s, font-size .2s;
+}
+
+.title:hover{
+  text-decoration-color: rgb(228, 228, 228, 1);
+}
+
+@media (max-width: 488px) {
+  .title{
+    font-size: 60px;
+  }
+}
+  

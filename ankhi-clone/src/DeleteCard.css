@@ -1,0 +1,11 @@
+#trashcan{
+    opacity: 25%;
+    display: flex;
+    margin: auto;
+    transition-duration: .2s;
+}
+
+#trashcan:hover{
+    cursor: pointer;
+    opacity: 40%;
+}

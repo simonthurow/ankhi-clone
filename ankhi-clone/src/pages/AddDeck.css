@@ -1,0 +1,34 @@
+.inputFields{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.newDeckInput{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(196, 196, 196);
+    width: 500px;
+    border-radius: 15px;
+    padding: 10px;
+    transition-duration: .2s;
+}
+.newDeckInput:hover, .searchInput:focus{
+    background-color: rgb(221, 221, 221);
+}
+
+.addDeckButton{
+    border-radius: 10px;
+    background: rgb(105, 105, 105);
+    padding: 25px;
+    margin: 20px;
+    font-size: 20px;
+    color: white;
+    transition-duration: 0.2s;
+}
+.addDeckButton:hover{   
+    padding: 28px;
+    margin: 17px;
+    border-color: white;
+    cursor: pointer;
+}

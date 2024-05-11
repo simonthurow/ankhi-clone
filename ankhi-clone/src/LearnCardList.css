@@ -1,0 +1,19 @@
+.cardsHeader{
+    color: white;
+    font-family: "Archivo", sans-serif;
+    text-decoration: underline;
+    display: flex;
+    justify-content: center;
+}
+
+.cardList{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.singleCard{
+    margin: 20px;
+}
+

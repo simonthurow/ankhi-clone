@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+.searchInputContainer{
+    display:flex;
+    justify-content: center;
+}
+
+.searchInput{
+    background-color: rgb(196, 196, 196);
+    width: 500px;
+    border-radius: 15px;
+    padding: 10px;
+    transition-duration: .2s;
+}
+
+.searchInput:hover, .searchInput:focus{
+    background-color: rgb(236, 236, 236);
+}
+
+.deckList{
+    transition-duration: 1s;
+}
+
+.addButton{
+    display: flex;
+    justify-content: center;
+    transition-duration: .3s;
+}
+
+.deckListHighlight {
+    margin-top: -100px;
+}
+
+.addButtonHighlight{
+    opacity: 0;
+}
+
+@media (max-width: 539px) {
+    .searchInput{
+        width: 400px;
+    }
+  }

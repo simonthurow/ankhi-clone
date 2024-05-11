@@ -1,0 +1,15 @@
+.decksHeader{
+    color: white;
+    font-family: "Archivo", sans-serif;
+    text-decoration: underline;
+    display: flex;
+    justify-content: center;
+}
+
+.deckList{
+    display:flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+}
